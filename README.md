@@ -1,71 +1,62 @@
-# Powtarzające się symbole.
+# Słownik T9.
 
-**Program wyszukujący najczęściej występujący symbol na obrazku. Symbol to zbiór czarnych punktów sąsiadujących ze sobą krawędzią (nie rogiem). Symbole różniące się obrotem czy będące swoimi odbiciami są różne.
-Obrazek (0 to biały punkt, 1 to czarny punkt) -  Zadanie  z przedmiotu AiSD na drugim semestrze studiów, programowanie proceduralne bez STL.**
+**Większość telefonów pozwala wprowadzać tekst przy pomocy słownika T9. Wprowadzanie polega na wpisywaniu cyfr przyporządkowanym literom. Słownik automatycznie przekształca ciąg cyfr na wyraz. Słownik potrafi także domyślać się dalszego ciągu słowa - na podstawie początkowego ciągu cyfr próbuje domyślić się, jaka będzie końcówka. Kodowanie to jest niestety niejednoznaczne (np. i mam i nam mają kody 626). Przyporządkowanie cyfr do liter jest następujące: abc = 2, def = 3, ghi = 4, jkl = 5, mno = 6, pqrs = 7, tuv = 8, wxyz = 9. Zatem np. wyraz pies ma kod T9 równy 7437. Program dla zadanego początkowego fragmentu kodu T9 znajdzie wszystkie pasujące do niego słowa ze słownika. -  Zadanie  z przedmiotu AiSD na drugim semestrze studiów, programowanie proceduralne bez STL.**
 
-* Sugerowane rozwiązania: przeszukiwanie wszerz lub w głąb do identyfikacji symboli, tablica haszowana do ich zliczania.
-* Pliki z przykładowymi danymi wejsciowymi i wyjściowymi znajdują się w dołączonym katalogu.
-    
 ---
 
 **Wejście**
 ---
 
-W pierwszej linii wejścia podaną zostane wymiary obrazka: szerokość (w) i wysokość (h). Żaden z wymiarów nie przekroczy 1000, żaden z nich nie będzie mniejszy niż 4. Każda z następnych h linii będzie zawierała w cyfr opisujących obrazek: 0 oznacza biały punkt, 1 to czarny punkt (należący do symbolu). Wymiary pojedynczego symbolu nie przekroczą 128x128 punktów. Odpowiedź będzie zawsze jednoznaczna (nie wystąpią dwa symbole o maksymalnej liczności).
+Na wejściu pojawi się: liczba n określająca, ile słow jest w słowniku, n wyrazów, każdy w osobnej linii, należących do słownika, składających się wyłącznie z małych liter, liczba m określająca liczbę zapytań, m napisów określających zapytania, składających się wyłącznie z cyfr, każde w osobnej linii. Długości wyrazów i zapytań nie przekroczą 100 znaków.
 
 **Wyjście**
 ---
     
-Na wejściu należy wypisać liczbę wystąpień najczęściej występującego symbolu oraz ten symbol w formacie takim jak obrazek, bez żadnej białej obwódki (w pierwszej i ostatniej kolumnie oraz w pierwszym i ostatnim wierszu symbolu powinien pojawić się przynajmniej jeden czarny punkt).
+Dla każdego zapytania, na wyjściu należy wypisać wszystkie pasujące słowa, w kolejności leksykograficznej ich kodów T9 (kod 123 jest zatem mniejszy niż kod 33). Słowa o takim samym kodzie powinny być uporządkowane leksykograficznie i rozdzielone spacją. Jeżeli do zapytania nie pasują żadne wyrazy, należy wypisać znak - (minus). Odpowiedź na każde zapytanie powinien kończyć znak nowej linii.
 
 **Przykłady**
 ---
-<code>
-1110011
-1000000
-1010101
-0000001
-1100111
-</code>
 
-<br>zawiera 4 różne symbole:
-
-<code>
-111
-100
-100
-<br>
-001
-001
-111
-<br>
-1
-<br>
-11
-</code>
-
----
 
 **Wejście**
 <code>
-10 10
-0101010100
-0000000110
-0100010000
-0110011010
-0000000011
-1100000000
-0110010011
-0000011000
-1001010010
-1100000011
+10
+ccc
+bbb
+aaa
+aba
+abc
+pies
+samochod
+samolot
+potrzebny
+paliwo
+10
+2
+22
+222
+2222
+7
+72
+726
+743
+7437
+744
 </code>
 
 **Wyjście**
+
 <code>
-6
-10
-11
+aaa aba abc bbb ccc 
+aaa aba abc bbb ccc 
+aaa aba abc bbb ccc 
+-
+paliwo samochod samolot pies potrzebny 
+paliwo samochod samolot 
+samochod samolot 
+pies 
+pies 
+-
 </code>
 
 ---
