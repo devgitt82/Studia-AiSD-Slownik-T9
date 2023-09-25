@@ -1,6 +1,8 @@
 # Słownik T9.
 
-**Większość telefonów pozwala wprowadzać tekst przy pomocy słownika T9. Wprowadzanie polega na wpisywaniu cyfr przyporządkowanym literom. Słownik automatycznie przekształca ciąg cyfr na wyraz. Słownik potrafi także domyślać się dalszego ciągu słowa - na podstawie początkowego ciągu cyfr próbuje domyślić się, jaka będzie końcówka. Kodowanie to jest niestety niejednoznaczne (np. i mam i nam mają kody 626). Przyporządkowanie cyfr do liter jest następujące: abc = 2, def = 3, ghi = 4, jkl = 5, mno = 6, pqrs = 7, tuv = 8, wxyz = 9. Zatem np. wyraz pies ma kod T9 równy 7437. Program dla zadanego początkowego fragmentu kodu T9 znajdzie wszystkie pasujące do niego słowa ze słownika. -  Zadanie  z przedmiotu AiSD na drugim semestrze studiów, programowanie proceduralne bez STL.**
+Większość telefonów pozwala wprowadzać tekst przy pomocy słownika T9. Wprowadzanie polega na wpisywaniu cyfr przyporządkowanym literom. Słownik automatycznie przekształca ciąg cyfr na wyraz. Słownik potrafi także domyślać się dalszego ciągu słowa - na podstawie początkowego ciągu cyfr próbuje domyślić się, jaka będzie końcówka. Kodowanie to jest niestety niejednoznaczne (np. i mam i nam mają kody 626). Przyporządkowanie cyfr do liter jest następujące: abc = 2, def = 3, ghi = 4, jkl = 5, mno = 6, pqrs = 7, tuv = 8, wxyz = 9. Zatem np. wyraz pies ma kod T9 równy 7437. 
+
+**Program dla zadanego początkowego fragmentu kodu T9 znajdzie wszystkie pasujące do niego słowa ze słownika. -  Zadanie  z przedmiotu AiSD na drugim semestrze studiów, programowanie proceduralne bez STL.**
 
 ---
 
