@@ -4,7 +4,6 @@
 
 **Program dla zadanego początkowego fragmentu kodu T9 znajdzie wszystkie pasujące do niego słowa ze słownika. -  Zadanie  z przedmiotu AiSD na drugim semestrze studiów, programowanie proceduralne bez STL.**
 
----
 
 **Wejście**
 ---
